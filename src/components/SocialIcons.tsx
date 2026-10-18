@@ -1,8 +1,6 @@
 import {
   FaGithub,
-  FaInstagram,
-  FaLinkedinIn,
-  FaXTwitter,
+  FaFacebook,
 } from "react-icons/fa6";
 import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
@@ -61,23 +59,27 @@ const SocialIcons = () => {
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
         <span>
-          <a href={config.contact.github} target="_blank" rel="noopener noreferrer">
+          <a href={config.contact.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <FaGithub />
           </a>
         </span>
         <span>
-          <a href={config.contact.linkedin} target="_blank" rel="noopener noreferrer">
-            <FaLinkedinIn />
+          <a href={config.contact.jobstreet} target="_blank" rel="noopener noreferrer" aria-label="JobStreet">
+            <svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+              <circle cx="50" cy="50" r="49" fill="#103779" />
+              {[15, 25, 35, 45, 55, 65, 75].map((x, column) =>
+                Array.from({ length: column < 4 ? 3 : column === 4 ? 7 : column === 5 ? 5 : 3 }, (_, row) => {
+                  const count = column < 4 ? 3 : column === 4 ? 7 : column === 5 ? 5 : 3;
+                  return <circle key={`${x}-${row}`} cx={x} cy={50 + (row - (count - 1) / 2) * 10} r={1 + column * 0.45} fill="white" />;
+                })
+              )}
+              <circle cx="86" cy="50" r="4.5" fill="white" />
+            </svg>
           </a>
         </span>
         <span>
-          <a href={config.contact.twitter} target="_blank" rel="noopener noreferrer">
-            <FaXTwitter />
-          </a>
-        </span>
-        <span>
-          <a href={config.contact.instagram} target="_blank" rel="noopener noreferrer">
-            <FaInstagram />
+          <a href={config.contact.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <FaFacebook />
           </a>
         </span>
       </div>

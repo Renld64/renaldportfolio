@@ -231,7 +231,22 @@
 
 .what-content-in {
   height: 100%;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accentColor) transparent;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.what-content-in:focus-visible {
+  outline: 1px solid var(--accentColor);
+  outline-offset: 4px;
+}
+
+.what-border1,
+.what-border2 {
+  pointer-events: none;
 }
 
 .what-content-in h5 {

@@ -1,18 +1,18 @@
 export const config = {
     developer: {
-        name: "Redoyanul",
-        fullName: "Redoyanul Haque",
+        name: "John Renald",
+        fullName: "John Renald Hidalgo",
         title: "AI & Full-Stack Developer",
         description: "AI & Full-Stack Developer building intelligent systems and modern web applications. Passionate about machine learning, deep learning, and creating next-gen autonomous agents."
     },
     social: {
-        github: "red1-for-hek",
-        email: "redoyanul1234@gmail.com",
+        github: "Renld64",
+        email: "renaldmain02@gmail.com",
         location: "Bangladesh"
     },
     about: {
         title: "About Me",
-        description: "I am a self-taught AI & Full-Stack Developer from Bangladesh. I build intelligent systems, chatbots, and modern web applications. My expertise includes Machine Learning, Deep Learning, NLP, and Full-Stack Web Development with React, Node.js, and Python. Currently building next-gen AI Agents and JARVIS-like Personal Assistants. I have a competitive programming mindset and a deep passion for automation. Code is poetry, AI is the canvas."
+        description: "I am a dedicated IT Support professional with hands-on experience in troubleshooting hardware, software, and network issues, combined with strong skills in Quality Assurance and AI Automation. I specialize in providing timely technical solutions, ensuring system reliability through structured testing, and building intelligent automation workflows that minimize downtime and manual work. Known for my problem-solving ability, attention to detail, patience, and clear communication with non-technical users, I am committed to excellent customer service while improving processes through quality standards and AI-driven automation. I continuously expand my technical expertise to support the efficiency and growth of the team."
     },
     experiences: [
         {
@@ -166,25 +166,26 @@ export const config = {
         }
     ],
     contact: {
-        email: "redoyanul1234@gmail.com",
-        github: "https://github.com/red1-for-hek",
+        email: "renaldmain02@gmail.com",
+        github: "https://github.com/Renld64",
+        jobstreet: "https://ph.jobstreet.com/profile/me",
         linkedin: "https://linkedin.com/in/red1-for-hek",
         twitter: "https://x.com/red_1_ul",
-        facebook: "https://www.facebook.com/redoyanulhaque.hacker.official",
+        facebook: "https://www.facebook.com/john.renaldz.cortez",
         instagram: "https://www.instagram.com/red_1_ul"
     },
     skills: {
         develop: {
-            title: "AI DEVELOPER",
-            description: "Building intelligent systems & AI solutions",
-            details: "Developing AI agents, chatbots, and machine learning models using Python, TensorFlow, and PyTorch. Specializing in LLMs, NLP, deep learning, and autonomous systems.",
-            tools: ["Python", "TensorFlow", "PyTorch", "OpenCV", "Scikit-learn", "LLMs", "NLP", "Deep Learning", "Chatbots", "AI Agents"]
+            title: "AI AUTOMATION",
+            description: "Building intelligent workflows & autonomous systems",
+            details: "Designing and deploying end-to-end AI-powered automations that eliminate repetitive work. Specializing in LLM agents, workflow orchestration, RAG pipelines, and multi-system integrations that run reliably in production.",
+            tools: ["Python", "LangChain", "LangGraph", "n8n", "OpenAI / Claude APIs", "FastAPI", "RAG", "Vector DBs", "Zapier / Make", "Prompt Engineering", "Webhooks & APIs"]
         },
         design: {
-            title: "FULL-STACK",
-            description: "Modern web development & scalable applications",
-            details: "Building responsive and performant web applications using React, Next.js, Node.js, and databases. Creating seamless user experiences with modern UI/UX principles.",
-            tools: ["React", "Next.js", "Node.js", "TypeScript", "MongoDB", "PostgreSQL", "TailwindCSS", "REST APIs", "Docker", "Git"]
+            title: "QUALITY ASSURANCE",
+            description: "Guaranteeing reliable & production-ready systems",
+            details: "Designing automated testing strategies for AI agents, web applications, and backend services. Focused on unit/integration testing, LLM output evaluation, performance benchmarking, and continuous quality gates in CI/CD pipelines.",
+            tools: ["Pytest", "Playwright", "Selenium", "Jest", "LangSmith", "Postman", "CI/CD", "Load Testing", "Model Evals", "Test Automation"]
         }
     }
 };

@@ -87,7 +87,7 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
 
-            <div className="what-content-in">
+            <div className="what-content-in" data-lenis-prevent tabIndex={0} role="region" aria-label="AI Automation details">
               <h3>{config.skills.develop.title}</h3>
               <h4>{config.skills.develop.description}</h4>
               <p>
@@ -120,7 +120,7 @@ const WhatIDo = () => {
               </svg>
             </div>
             <div className="what-corner"></div>
-            <div className="what-content-in">
+            <div className="what-content-in" data-lenis-prevent tabIndex={0} role="region" aria-label="Quality Assurance details">
               <h3>{config.skills.design.title}</h3>
               <h4>{config.skills.design.description}</h4>
               <p>

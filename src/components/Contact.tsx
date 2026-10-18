@@ -85,22 +85,13 @@ const Contact = () => {
               Github <MdArrowOutward />
             </a>
             <a
-              href={config.contact.linkedin}
+              href={config.contact.jobstreet}
               target="_blank"
               rel="noopener noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
-              Linkedin <MdArrowOutward />
-            </a>
-            <a
-              href={config.contact.twitter}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Twitter <MdArrowOutward />
+              JobStreet <MdArrowOutward />
             </a>
             <a
               href={config.contact.facebook}

@@ -11,7 +11,7 @@ const CallToAction = () => {
         </Link>
         
         <a 
-          href={config.contact.linkedin} 
+          href={config.contact.jobstreet} 
           target="_blank" 
           rel="noopener noreferrer" 
           className="cta-btn cta-btn-hire"
