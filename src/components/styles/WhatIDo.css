@@ -36,6 +36,30 @@
   color: var(--accentColor);
 }
 
+@media only screen and (min-width: 901px) {
+  .what-box:first-child {
+    position: absolute;
+    top: 6%;
+    left: 0;
+    justify-content: center;
+  }
+
+  .what-box:first-child h2 {
+    margin: 0;
+    font-size: clamp(36px, 4.5vw, 86px);
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+
+  .what-box:first-child h2 > div {
+    display: inline;
+  }
+
+  .what-box:last-child {
+    margin-left: auto;
+  }
+}
+
 .what-box-in {
   flex-direction: column;
   height: 500px;

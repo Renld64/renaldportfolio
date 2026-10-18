@@ -1,0 +1,21 @@
+.project-video {
+  display: block;
+  width: 100%;
+  min-height: 160px;
+  max-height: 320px;
+  flex-shrink: 0;
+  border: 1px solid #ffffff30;
+  border-radius: 8px;
+  background: #000;
+  object-fit: contain;
+  cursor: auto;
+}
+.work-flex .work-box.work-box-video {
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+.work-box-video::-webkit-scrollbar { display: none; }
+.work-box-video .project-description { margin: 12px 0; line-height: 1.5; }

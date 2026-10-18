@@ -27,11 +27,13 @@ const Navbar = () => {
     lenis.stop();
 
     // Handle smooth scroll animation frame
+    let frame = 0;
+    const listeners = new AbortController();
     function raf(time: number) {
       lenis?.raf(time);
-      requestAnimationFrame(raf);
+      frame = requestAnimationFrame(raf);
     }
-    requestAnimationFrame(raf);
+    frame = requestAnimationFrame(raf);
 
     // Handle navigation links
     let links = document.querySelectorAll(".header ul a");
@@ -52,23 +54,26 @@ const Navbar = () => {
             }
           }
         }
-      });
+      }, { signal: listeners.signal });
     });
 
     // Handle resize
     window.addEventListener("resize", () => {
       lenis?.resize();
-    });
+    }, { signal: listeners.signal });
 
     return () => {
+      cancelAnimationFrame(frame);
+      listeners.abort();
       lenis?.destroy();
+      lenis = null;
     };
   }, []);
   return (
     <>
       <div className="header">
         <a href="/#" className="navbar-title" data-cursor="disable">
-          RH
+          JR
         </a>
         <a
           href={`mailto:${config.social.email}`}

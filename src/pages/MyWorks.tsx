@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { config } from "../config";
 import "./MyWorks.css";
+import ProjectGallery from "../components/ProjectGallery";
+import ProjectVideo from "../components/ProjectVideo";
 
 const MyWorks = () => {
   return (
@@ -17,6 +19,18 @@ const MyWorks = () => {
 
       <div className="myworks-grid">
         {config.projects.map((project, index) => {
+          if (project.gallery || project.video) return (
+            <article className="myworks-card" key={project.id}>
+              <div className="myworks-card-number">0{index + 1}</div>
+              {project.video ? <ProjectVideo src={project.video} title={project.title} /> : project.gallery && <ProjectGallery images={project.gallery} title={project.title} />}
+              <div className="myworks-card-info">
+                <h3>{project.title}</h3>
+                <p className="myworks-card-category">{project.category}</p>
+                <p className="myworks-card-description">{project.description}</p>
+                <p className="myworks-card-tech">Tools: {project.technologies}</p>
+              </div>
+            </article>
+          );
           const isInternalLink = Boolean(project.link?.startsWith("/"));
           const cardContent = (
             <>

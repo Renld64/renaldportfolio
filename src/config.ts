@@ -8,7 +8,7 @@ export const config = {
     social: {
         github: "Renld64",
         email: "renaldmain02@gmail.com",
-        location: "Bangladesh"
+        location: "Philippines"
     },
     about: {
         title: "About Me",
@@ -16,74 +16,37 @@ export const config = {
     },
     experiences: [
         {
-            position: "Learning Something New",
-            company: "Self-Development",
-            period: "2025 - Present",
-            location: "Bangladesh",
-            description: "Continuously exploring emerging technologies, researching advanced AI systems, and pushing the boundaries of what's possible in tech.",
-            responsibilities: [
-                "Researching cutting-edge AI and ML technologies",
-                "Experimenting with new frameworks and tools",
-                "Contributing to open-source projects",
-                "Building innovative personal projects"
-            ],
-            technologies: ["Research", "Innovation", "Open Source", "New Tech"]
+            position: "Quality Assurance Role",
+            company: "Quantum Metal Philippines INC",
+            period: "Jan 2026 - Present",
+            location: "Philippines",
+            description: "A Quality Assurance (QA) professional is responsible for ensuring that products, services, or processes meet defined quality standards before they reach customers or go into production.",
+            responsibilities: [],
+            technologies: []
         },
         {
-            position: "AI Engineer",
-            company: "Freelance & Projects",
-            period: "2025",
-            location: "Bangladesh",
-            description: "Developing intelligent AI systems, chatbots, and machine learning solutions. Building next-gen conversational AI agents and JARVIS-like personal assistants.",
-            responsibilities: [
-                "Building AI-powered chatbots and conversational agents",
-                "Developing machine learning models with TensorFlow and PyTorch",
-                "Working with LLMs and transformer architectures",
-                "Creating autonomous AI systems and automation tools"
-            ],
-            technologies: ["Python", "TensorFlow", "PyTorch", "LLMs", "NLP", "AI Agents"]
-        },
-        {
-            position: "Full-Stack Developer",
-            company: "Freelance & Projects",
+            position: "Information Technology Support Role",
+            company: "ATAW MARKETING",
             period: "2024",
-            location: "Bangladesh",
-            description: "Built complete web applications from frontend to backend. Developed responsive UIs, RESTful APIs, and database solutions for various clients and projects.",
+            location: "",
+            description: "I am an experienced IT Support professional skilled in troubleshooting hardware, software, and network issues. I work with Windows, Office 365, Active Directory, and remote desktop tools to provide fast and clear support to both technical and non-technical users.\n\nI focus on solving problems quickly, reducing downtime, and keeping systems running smoothly. With strong communication and customer service skills, I aim to deliver high user satisfaction and help the organization grow.",
             responsibilities: [
-                "Developing full-stack web applications using React and Node.js",
-                "Building RESTful APIs and integrating databases",
-                "Creating responsive and interactive user interfaces",
-                "Deploying and maintaining web applications"
+                "Troubleshooting hardware, software, and network issues",
+                "Providing support to technical and non-technical users",
+                "Reducing downtime and keeping systems running smoothly"
             ],
-            technologies: ["React", "Node.js", "MongoDB", "Express", "Next.js", "TypeScript"]
+            technologies: ["Windows", "Office 365", "Active Directory", "Remote Desktop"]
         },
         {
-            position: "Python Developer",
-            company: "Self-Taught & Projects",
-            period: "2023",
-            location: "Bangladesh",
-            description: "Dove deep into Python programming, building automation scripts, bots, and mastering the fundamentals of software development and problem-solving.",
-            responsibilities: [
-                "Learning Python programming and core concepts",
-                "Building automation scripts and Discord bots",
-                "Exploring data structures and algorithms",
-                "Participating in competitive programming"
-            ],
-            technologies: ["Python", "Automation", "Scripting", "Discord.py", "Problem Solving"]
-        },
-        {
-            position: "Graphic Designer",
-            company: "Freelance",
+            position: "IT Support Role",
+            company: "Araullo University",
             period: "2022",
-            location: "Bangladesh",
-            description: "Started my creative journey as a graphic designer, creating logos, banners, and visual content. This sparked my passion for technology and digital creation.",
+            location: "",
+            description: "Assisted in troubleshooting hardware, software, and basic network issues for end-users.",
             responsibilities: [
-                "Designing logos and brand identity materials",
-                "Creating social media graphics and banners",
-                "Working with clients on creative projects",
-                "Learning design principles and visual aesthetics"
+                "Assisted in troubleshooting hardware, software, and basic network issues for end-users."
             ],
-            technologies: ["Photoshop", "Illustrator", "Canva", "Figma", "Visual Design"]
+            technologies: []
         },
         {
             position: "Microsoft Office",
@@ -103,30 +66,33 @@ export const config = {
     projects: [
         {
             id: 1,
-            title: "Drishti",
-            category: "AI / LLM",
-            technologies: "Python, PyTorch, Transformers, FastAPI, React, MongoDB",
-            image: "/images/Drishti.png",
-            description: "Bangladesh's first intelligent advanced AI chatbot powered by a custom Large Language Model. Features natural language understanding, contextual conversations, and multilingual support including Bengali.",
-            link: "https://huggingface.co/red1-for-hek/drishti-ilm-x1"
+            title: "3D Shortfilm Animation",
+            category: "Capstone / 3D Animation",
+            technologies: "Blender",
+            image: "/images/shortfilm-1.png",
+            gallery: ["/images/shortfilm-1.png", "/images/shortfilm-2.png", "/images/shortfilm-3.png", "/images/shortfilm-4.png"],
+            description: "3D Short Film Animation is our capstone project: a short film set during the pandemic. It follows five companions facing challenges in their studies and shows that cheating is not the way to succeed.",
+            link: ""
         },
         {
             id: 2,
-            title: "VoteChain",
-            category: "Blockchain",
-            technologies: "Solidity, Web3.js, React, Ethereum, IPFS, MetaMask, Node.js",
-            image: "/images/VoteChain.png",
-            description: "A decentralized election system built on blockchain technology ensuring transparent, tamper-proof, and verifiable voting. Features smart contracts for vote integrity and real-time result tracking.",
-            link: "https://github.com/red1-for-hek/smart-election-by-blockchain"
+            title: "Filipino Dishes App",
+            category: "Android Application",
+            technologies: "Android Studio",
+            image: "",
+            video: "/video/filipino-dishes-demo.mp4",
+            description: "Developed during our second year of school by John Carlo Cruz, John Renald Hidalgo, and Arjahn Dave Cruz. Filipino Dishes App helps users learn how to cook Filipino dishes. Selecting a dish displays its ingredients and step-by-step cooking instructions.",
+            link: ""
         },
         {
             id: 4,
-            title: "Flood Spaces 2.0",
-            category: "AI / ML",
-            technologies: "Python, TensorFlow, Pandas, React, FastAPI, GIS",
-            image: "/images/FloodSpaces.png",
-            description: "Predicts flood risks across Bangladesh up to one month in advance and sends early alerts to help people prepare.",
-            link: "https://github.com/red1-for-hek/Flood-Spaces-2.0"
+            title: "Lakbay Transit",
+            category: "Mobile App / Ticket Booking",
+            technologies: "Android Studio",
+            image: "/images/lakbay-transit-1.png",
+            gallery: ["/images/lakbay-transit-1.png", "/images/lakbay-transit-2.png", "/images/lakbay-transit-3.png", "/images/lakbay-transit-4.png", "/images/lakbay-transit-5.png", "/images/lakbay-transit-6.png"],
+            description: "Lakbay Transit is a modern bus company in the Philippines, operating routes connecting Metro Manila to Central Luzon and Northern Luzon. The Lakbay Transit mobile application simplifies the task of maintaining a good connection between passengers and bus drivers.",
+            link: ""
         },
         {
             id: 5,
@@ -172,7 +138,7 @@ export const config = {
         linkedin: "https://linkedin.com/in/red1-for-hek",
         twitter: "https://x.com/red_1_ul",
         facebook: "https://www.facebook.com/john.renaldz.cortez",
-        instagram: "https://www.instagram.com/red_1_ul"
+        instagram: "https://www.instagram.com/__renald64/"
     },
     skills: {
         develop: {

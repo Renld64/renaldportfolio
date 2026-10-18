@@ -4,6 +4,7 @@ import { useLoading } from "../context/LoadingProvider";
 import { config } from "../config";
 
 import Marquee from "react-fast-marquee";
+import { lenis } from "./Navbar";
 
 const Loading = ({ percent }: { percent: number }) => {
   const { setIsLoading } = useLoading();
@@ -11,28 +12,44 @@ const Loading = ({ percent }: { percent: number }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [clicked, setClicked] = useState(false);
 
-  if (percent >= 100) {
-    setTimeout(() => {
+  const complete = percent >= 100;
+  useEffect(() => {
+    if (!complete) return;
+    let finishTimer: ReturnType<typeof setTimeout>;
+    const timer = setTimeout(() => {
       setLoaded(true);
-      setTimeout(() => {
+      finishTimer = setTimeout(() => {
         setIsLoaded(true);
-      }, 1000);
-    }, 600);
-  }
+      }, 100);
+    }, 0);
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(finishTimer);
+    };
+  }, [complete]);
 
   useEffect(() => {
-    import("./utils/initialFX").then((module) => {
-      if (isLoaded) {
-        setClicked(true);
-        setTimeout(() => {
-          if (module.initialFX) {
-            module.initialFX();
-          }
-          setIsLoading(false);
-        }, 900);
-      }
-    });
-  }, [isLoaded]);
+    if (!isLoaded) return;
+    let cancelled = false;
+    setClicked(true);
+    const timer = setTimeout(() => {
+      // Reveal the page independently of optional intro effects.
+      document.body.style.overflowY = "auto";
+      document.querySelector("main")?.classList.add("main-active");
+      document.body.style.backgroundColor = "#0b080c";
+      lenis?.start();
+      setIsLoading(false);
+    }, 150);
+    import("./utils/initialFX")
+      .then((module) => {
+        if (!cancelled) module.initialFX();
+      })
+      .catch((error) => console.error("Intro animation could not start:", error));
+    return () => {
+      cancelled = true;
+      clearTimeout(timer);
+    };
+  }, [isLoaded, setIsLoading]);
 
   function handleMouseMove(e: React.MouseEvent<HTMLElement>) {
     const { currentTarget: target } = e;
@@ -119,18 +136,10 @@ export const setProgress = (setLoading: (value: number) => void) => {
   }
 
   function loaded() {
-    return new Promise<number>((resolve) => {
-      clearInterval(interval);
-      interval = setInterval(() => {
-        if (percent < 100) {
-          percent++;
-          setLoading(percent);
-        } else {
-          resolve(percent);
-          clearInterval(interval);
-        }
-      }, 2);
-    });
+    clearInterval(interval);
+    percent = 100;
+    setLoading(percent);
+    return Promise.resolve(percent);
   }
   return { loaded, percent, clear };
 };

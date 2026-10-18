@@ -7,21 +7,27 @@ const Cursor = () => {
   useEffect(() => {
     let hover = false;
     const cursor = cursorRef.current!;
+    if (window.matchMedia("(pointer: coarse)").matches) return;
+    const listeners = new AbortController();
+    const setX = gsap.quickSetter(cursor, "x", "px");
+    const setY = gsap.quickSetter(cursor, "y", "px");
+    let frame = 0;
     const mousePos = { x: 0, y: 0 };
     const cursorPos = { x: 0, y: 0 };
     document.addEventListener("mousemove", (e) => {
       mousePos.x = e.clientX;
       mousePos.y = e.clientY;
-    });
-    requestAnimationFrame(function loop() {
+    }, { signal: listeners.signal });
+    frame = requestAnimationFrame(function loop() {
       if (!hover) {
         const delay = 6;
         cursorPos.x += (mousePos.x - cursorPos.x) / delay;
         cursorPos.y += (mousePos.y - cursorPos.y) / delay;
-        gsap.to(cursor, { x: cursorPos.x, y: cursorPos.y, duration: 0.1 });
+        setX(cursorPos.x);
+        setY(cursorPos.y);
         // cursor.style.transform = `translate(${cursorPos.x}px, ${cursorPos.y}px)`;
       }
-      requestAnimationFrame(loop);
+      frame = requestAnimationFrame(loop);
     });
     document.querySelectorAll("[data-cursor]").forEach((item) => {
       const element = item as HTMLElement;
@@ -40,12 +46,17 @@ const Cursor = () => {
         if (element.dataset.cursor === "disable") {
           cursor.classList.add("cursor-disable");
         }
-      });
+      }, { signal: listeners.signal });
       element.addEventListener("mouseout", () => {
         cursor.classList.remove("cursor-disable", "cursor-icons");
         hover = false;
-      });
+      }, { signal: listeners.signal });
     });
+    return () => {
+      cancelAnimationFrame(frame);
+      listeners.abort();
+      gsap.killTweensOf(cursor);
+    };
   }, []);
 
   return <div className="cursor-main" ref={cursorRef}></div>;

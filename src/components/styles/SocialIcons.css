@@ -43,6 +43,13 @@
   will-change: left, top;
   transition: transform 0.3s ease-out;
 }
+.social-icons a > svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
 .resume-button {
   position: absolute;
   z-index: 99;
