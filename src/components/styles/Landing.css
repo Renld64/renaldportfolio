@@ -390,6 +390,8 @@
 }
 
 h2.landing-info-h2 {
+  isolation: isolate;
+  overflow: hidden;
   color: #c481ff;
   font-size: 36px;
   width: 150%;
@@ -567,17 +569,4 @@ h2.landing-info-h2 {
   .landing-info-h2::after { display: none; }
 }
 
-
-/* Desktop role treatment matching the reference, with longer custom titles. */
-@media screen and (min-width: 769px) {
-  .landing-info > h2 { margin: 0; line-height: 1.12; letter-spacing: 0.025em; font-weight: 700; }
-  .landing-info > h2.landing-info-h2 { width: 100%; margin: 0; font-size: clamp(30px, 2.65vw, 52px); }
-  .landing-info > h2:not(.landing-info-h2) { margin-top: -4px; margin-left: 12px; font-size: clamp(26px, 2.35vw, 46px); }
-  .landing-info-h2::after { display: none; }
-  .landing-h2-1 { color: #a56cda; background: linear-gradient(180deg, #bc8be9 10%, #8951b4 55%, #291632 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-  .landing-h2-info { color: #eae5ec; }
-}
-@media screen and (min-width: 1025px) {
-  .landing-container .landing-info { left: 64%; width: 36%; }
-}
 
