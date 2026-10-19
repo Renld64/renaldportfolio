@@ -791,3 +791,21 @@ body:has(.play-page) {
     flex: 1 1 auto;
   }
 }
+.checkmate-dialog {
+  width: min(380px, calc(100vw - 48px));
+  box-sizing: border-box;
+  padding: 32px;
+  border: 1px solid #b894f080;
+  border-radius: 18px;
+  background: #17111f;
+  color: #eee8f4;
+  text-align: center;
+  box-shadow: 0 20px 80px #0009;
+}
+.checkmate-dialog::backdrop { background: #08050bd9; }
+.checkmate-symbol { color: #c4a3ff; font-size: 56px; }
+.checkmate-dialog h2 { margin: 8px 0; font-size: 30px; }
+.checkmate-dialog p { margin: 12px 0 24px; font-size: 20px; color: #c4a3ff; }
+.checkmate-actions { display: flex; flex-direction: column; gap: 10px; }
+.checkmate-actions .control-btn:first-child { background: #c4a3ff; color: #17111f; }
+.checkmate-actions button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }

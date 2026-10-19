@@ -35,9 +35,9 @@ const MyWorks = () => {
           const cardContent = (
             <>
               <div className="myworks-card-number">0{index + 1}</div>
-              <div className="myworks-card-image">
+              {project.image && <div className="myworks-card-image">
                 <img src={project.image} alt={project.title} loading="lazy" decoding="async" />
-              </div>
+              </div>}
               <div className="myworks-card-info">
                 <h3>{project.title}</h3>
                 <p className="myworks-card-category">{project.category}</p>

@@ -552,3 +552,32 @@ h2.landing-info-h2 {
     font-size: 75px;
   }
 }
+/* Mobile hero: keep the photo and both roles within the viewport. */
+@media only screen and (max-width: 768px) {
+  .landing-section { min-height: 100svh; padding: 0 20px 40px; }
+  .landing-section .landing-container { width: 100%; min-height: auto; padding: 0; gap: 24px; }
+  .landing-container .landing-intro { padding-top: 110px; margin-bottom: 0; }
+  .landing-container .landing-intro h2 { color: var(--accentColor); opacity: 1; margin-bottom: 10px; }
+  .landing-container .landing-intro h1 { font-size: clamp(26px, 7vw, 36px) !important; line-height: 1.2 !important; }
+  .landing-container .mobile-photo { width: min(100%, 320px); border-radius: 18px; overflow: hidden; mask-image: none; -webkit-mask-image: none; }
+  .landing-container .mobile-photo img { display: block; width: 100%; max-height: 42svh; object-fit: cover; object-position: center 30%; filter: none; }
+  .landing-container .landing-info { margin: 0; padding: 0 0 20px; gap: 10px; min-width: 0; }
+  .landing-container .landing-info h2, .landing-container .landing-info h2.landing-info-h2 { width: 100%; margin: 0 !important; font-size: clamp(18px, 5.2vw, 26px) !important; line-height: 1.4 !important; letter-spacing: 0.03em; }
+  .landing-container .landing-h2-1, .landing-container .landing-h2-info { width: 100%; font-size: inherit !important; white-space: normal; overflow-wrap: break-word; }
+  .landing-info-h2::after { display: none; }
+}
+
+
+/* Desktop role treatment matching the reference, with longer custom titles. */
+@media screen and (min-width: 769px) {
+  .landing-info > h2 { margin: 0; line-height: 1.12; letter-spacing: 0.025em; font-weight: 700; }
+  .landing-info > h2.landing-info-h2 { width: 100%; margin: 0; font-size: clamp(30px, 2.65vw, 52px); }
+  .landing-info > h2:not(.landing-info-h2) { margin-top: -4px; margin-left: 12px; font-size: clamp(26px, 2.35vw, 46px); }
+  .landing-info-h2::after { display: none; }
+  .landing-h2-1 { color: #a56cda; background: linear-gradient(180deg, #bc8be9 10%, #8951b4 55%, #291632 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .landing-h2-info { color: #eae5ec; }
+}
+@media screen and (min-width: 1025px) {
+  .landing-container .landing-info { left: 64%; width: 36%; }
+}
+

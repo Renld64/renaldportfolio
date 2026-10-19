@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { rememberHomePosition } from "../utils/homeNavigation";
 
 interface Props {
   image: string;
@@ -47,6 +48,7 @@ const WorkImage = (props: Props) => {
           <Link
             className="work-image-in"
             to={props.link}
+            onClick={rememberHomePosition}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={() => setIsVideo(false)}
             data-cursor={"disable"}

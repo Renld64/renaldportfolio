@@ -7,6 +7,9 @@ import {
   useState,
 } from "react";
 import Loading from "../components/Loading";
+import { homeNavigation } from "../utils/homeNavigation";
+import { lenis } from "../components/Navbar";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 interface LoadingType {
   isLoading: boolean;
@@ -17,9 +20,10 @@ interface LoadingType {
 export const LoadingContext = createContext<LoadingType | null>(null);
 
 export const LoadingProvider = ({ children }: PropsWithChildren) => {
+  const [returnPosition] = useState(homeNavigation.scrollY);
   const [isLoading, setIsLoading] = useState(() => {
     // Skip loading on mobile
-    if (window.innerWidth <= 1024) return false;
+    if (window.innerWidth <= 1024 || homeNavigation.scrollY !== null) return false;
     return true;
   });
   const [loading, updateLoading] = useState(0);
@@ -41,18 +45,34 @@ export const LoadingProvider = ({ children }: PropsWithChildren) => {
   };
   useEffect(() => {
     // Auto-start animations on mobile since there's no 3D model
-    if (window.innerWidth <= 1024) {
+    let cancelled = false;
+    let timer: ReturnType<typeof setTimeout>;
+    if (window.innerWidth <= 1024 || returnPosition !== null) {
       import("../components/utils/initialFX").then((module) => {
-        if (module.initialFX) {
-          setTimeout(() => {
+        if (!cancelled && module.initialFX) {
+          timer = setTimeout(() => {
             module.initialFX();
+            if (returnPosition !== null) {
+              ScrollTrigger.refresh();
+              window.scrollTo(0, returnPosition);
+              lenis?.scrollTo(returnPosition, { immediate: true });
+            }
           }, 100);
         }
       });
     }
-  }, []);
+    return () => { cancelled = true; clearTimeout(timer); };
+  }, [returnPosition]);
 
-  useEffect(() => {}, [loading]);
+  useEffect(() => {
+    if (returnPosition === null || loading < 100) return;
+    const timer = setTimeout(() => {
+      ScrollTrigger.refresh();
+      window.scrollTo(0, returnPosition);
+      lenis?.scrollTo(returnPosition, { immediate: true });
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [loading, returnPosition]);
 
   return (
     <LoadingContext.Provider value={value as LoadingType}>

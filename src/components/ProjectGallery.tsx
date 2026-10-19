@@ -21,7 +21,7 @@ const ProjectGallery = ({ images, title }: { images: string[]; title: string }) 
 
   return (
     <>
-      <div className="project-gallery" aria-label={`${title} image gallery`}>
+      <div className={`project-gallery ${images.length === 1 ? "project-gallery-single" : ""}`} aria-label={`${title} image gallery`}>
         {images.map((image, index) => (
           <button key={image} type="button" className="project-gallery-thumb" onClick={() => setSelected(index)} aria-label={`Enlarge ${title}, image ${index + 1}`} data-cursor="disable">
             <img src={image} alt={`${title}, scene ${index + 1}`} loading="lazy" decoding="async" />

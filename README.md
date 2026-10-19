@@ -1,100 +1,79 @@
-# 🚀 3D Developer Portfolio Website (React + TypeScript + Three.js)
+# John Renald Hidalgo | Portfolio
 
-[![3D portfolio preview (click to watch video)](./Screenshot_2026-04-08_22-10-00.png)](./video.mp4)
+My personal portfolio showcasing my experience in **IT Support**, **Quality Assurance**, and **AI Automation**, alongside selected school projects.
 
-A modern, high-performance **3D developer portfolio website** built with **React**, **TypeScript**, **Three.js**, **GSAP**, and **WebGL**.
+**Live website:** [renaldportfolio.vercel.app](https://renaldportfolio.vercel.app/)
 
-If you’re a developer looking for a **portfolio template** that feels premium, interactive, and memorable—this repo is for you.
+**Repository:** [Renld64/renaldportfolio](https://github.com/Renld64/renaldportfolio)
 
-> Live preview: https://www.redoyanulhaque.me/
+## About me
 
----
+I am an IT Support professional with hands-on experience troubleshooting hardware, software, and network issues. My interests and skills also include structured testing, system reliability, and AI-powered automation workflows that reduce repetitive work.
 
-## ✨ Highlights
+## Features
 
-- **3D / WebGL experience** powered by **Three.js**
-- Smooth animations with **GSAP**
-- Modern **React + TypeScript** codebase
-- Fast, responsive UI (desktop + mobile)
-- Designed for developers, engineers, programmers, and creators
+- Interactive 3D character and animated desktop experience
+- Responsive mobile layout with my profile photo
+- Career history and service descriptions
+- Project galleries with individual image zoom
+- Filipino Dishes App video demonstration
+- Downloadable resume and social profile links
+- Playable chess experience with a checkmate popup
+- Return navigation that remembers the previous homepage position
 
----
+## Selected projects
 
-## 🧰 Tech Stack
+- **3D Shortfilm Animation** — A Blender capstone short film about students navigating challenges during the pandemic. Gallery previews were recreated with AI from reference images.
+- **Filipino Dishes App** — A second-year Android Studio project developed with John Carlo Cruz and Arjahn Dave Cruz. Users can select a Filipino dish to view ingredients and cooking instructions.
+- **Lakbay Transit** — An Android Studio mobile application project focused on ticket booking and communication between passengers and bus drivers.
+- **Arduino Flood Monitoring System** — An Arduino-based project using sensors to monitor water levels and a GSM module to support alerts.
 
-- **React**
-- **TypeScript**
-- **Three.js / WebGL**
-- **GSAP**
-- **HTML / CSS / JavaScript**
+## Tech stack
 
----
+React, TypeScript, Vite, Three.js, GSAP, Lenis, HTML, and CSS. Hosted on Vercel.
 
-## 🚀 Getting Started
-
-### 1) Clone
-
-```bash
-git clone https://github.com/red1-for-hek/portfolio-website.git
-cd portfolio-website
-```
-
-### 2) Install
+## Run locally
 
 ```bash
+git clone https://github.com/Renld64/renaldportfolio.git
+cd renaldportfolio
 npm install
-```
-
-### 3) Run locally
-
-```bash
 npm run dev
 ```
 
-### 4) Build
+If PowerShell blocks `npm.ps1`, use `npm.cmd install` and `npm.cmd run dev` instead.
+
+## Production build
 
 ```bash
 npm run build
+npm run preview
 ```
 
----
+The production output is generated in `dist/`. Vercel routing is configured in `vercel.json`.
 
-## 🧩 Customize (Quick Guide)
+## Configuration
 
-Typical things you’ll want to update:
+- Personal information, career history, projects, and links: `src/config.ts`
+- Images and resume: `public/`
+- Project demo video: `public/video/`
+- Hero layout: `src/components/Landing.tsx` and its stylesheet
 
-- **Your name + hero section text**
-- **Projects list**
-- **Social links** (GitHub, LinkedIn, email)
-- **SEO meta title/description**
+The optional chat API requires a server-side `GROQ_API_KEY` environment variable in Vercel. Never commit API keys. Some inherited chat persona content still needs personalization; the chat feature is not configured in production.
 
----
+## Connect
 
-## ⭐ Support
+- **Email:** [renaldmain02@gmail.com](mailto:renaldmain02@gmail.com)
+- **GitHub:** [Renld64](https://github.com/Renld64)
+- **JobStreet:** [John Renald Hidalgo](https://ph.jobstreet.com/profiles/johnrenald-hidalgo-VdY85V8p7p)
+- **Facebook:** [John Renald](https://www.facebook.com/john.renaldz.cortez)
+- **Instagram:** [@__renald64](https://www.instagram.com/__renald64/)
+- **Location:** Philippines
 
-If you found this useful:
+## Attribution and license
 
-- Please **star** the repository (it helps a lot)
-- Share it with a friend who needs a portfolio template
-- Sponsor via the **Sponsor** button on GitHub (if available in your region)
+I customized an open-source portfolio template to showcase my experience in IT Support, Quality Assurance, and AI Automation.
 
----
+The original template was created by **Redoyanul Haque**: [red1-for-hek/portfolio-website](https://github.com/red1-for-hek/portfolio-website). The site retains template components, including its 3D character and chess experience.
 
-## 🤝 Connect
-
-- LinkedIn: https://www.linkedin.com/in/red1-for-hek/
-
----
-
-## 🏷️ Recommended GitHub Topics (add in repo settings)
-
-Add these topics to improve GitHub search visibility:
-
-`portfolio` `developer-portfolio` `portfolio-website` `portfolio-template` `3d-portfolio` `react` `typescript` `threejs` `webgl` `gsap` `frontend` `vite`
-
----
-
-## 🪪 License
-
-This project is open source and available under the **MIT License**. See [LICENSE](LICENSE).
-# renaldportfolio
+Distributed under the **MIT License**. The original copyright and license notice are preserved in [LICENSE](LICENSE).

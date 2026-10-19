@@ -7,6 +7,7 @@ import { config } from "../config";
 import { Link } from "react-router-dom";
 import ProjectGallery from "./ProjectGallery";
 import ProjectVideo from "./ProjectVideo";
+import { rememberHomePosition } from "../utils/homeNavigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,11 +79,11 @@ const Work = () => {
                     <p>{project.category}</p>
                   </div>
                 </div>
-                {(project.gallery || project.video) && <p className="project-description">{project.description}</p>}
+                {(project.gallery || project.video || !project.image) && <p className="project-description">{project.description}</p>}
                 <h4>{project.gallery || project.video ? "Tools" : "Tools and features"}</h4>
                 <p>{project.technologies}</p>
               </div>
-              {project.video ? <ProjectVideo src={project.video} title={project.title} /> : project.gallery ? <ProjectGallery images={project.gallery} title={project.title} /> : <WorkImage image={project.image} alt={project.title} link={project.link} />}
+              {project.video ? <ProjectVideo src={project.video} title={project.title} /> : project.gallery ? <ProjectGallery images={project.gallery} title={project.title} /> : project.image ? <WorkImage image={project.image} alt={project.title} link={project.link} /> : null}
             </div>
           ))}
           {/* See All Works Button */}
@@ -90,7 +91,7 @@ const Work = () => {
             <div className="see-all-works">
               <h3>Want to see more?</h3>
               <p>Explore all of my projects and creations</p>
-              <Link to="/myworks" className="see-all-btn" data-cursor="disable">
+              <Link to="/myworks" onClick={rememberHomePosition} className="see-all-btn" data-cursor="disable">
                 See All Works →
               </Link>
             </div>

@@ -87,13 +87,21 @@ const Play = () => {
   const [boardFlipped, setBoardFlipped] = useState(false);
   const [lastMove, setLastMove] = useState<{ from: Square; to: Square } | null>(null);
   const [gameStatus, setGameStatus] = useState<string>("");
+  const [showCheckmate, setShowCheckmate] = useState(false);
+  const checkmateDialog = useRef<HTMLDialogElement>(null);
+
+  useEffect(() => {
+    const dialog = checkmateDialog.current;
+    if (showCheckmate) dialog?.showModal();
+    else dialog?.close();
+  }, [showCheckmate]);
   const [playerColor] = useState<Color>("w");
   const [engineThinking, setEngineThinking] = useState(false);
   const redoxchessRef = useRef<RedoxChessEngine | null>(null);
 
   // Chat state
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([
-    { role: 'assistant', content: 'Hello there! I am Redoyanul Haque 👋 Ask me anything you want to know!' }
+    { role: 'assistant', content: 'Hello there! I am John Renald Hidalgo 👋 Ask me anything you want to know!' }
   ]);
   const [chatInput, setChatInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -103,6 +111,7 @@ const Play = () => {
 
   const updateGameStatus = useCallback((g: Chess) => {
     if (g.isCheckmate()) {
+      setShowCheckmate(true);
       setGameStatus(g.turn() === 'w' ? 'Checkmate! Black wins!' : 'Checkmate! White wins!');
     } else if (g.isDraw()) {
       if (g.isStalemate()) setGameStatus('Draw by stalemate');
@@ -213,6 +222,7 @@ const Play = () => {
   };
 
   const resetGame = () => {
+    setShowCheckmate(false);
     setGame(new Chess());
     setSelectedSquare(null);
     setPossibleMoves([]);
@@ -381,10 +391,10 @@ const Play = () => {
           <div className="player-bar opponent-bar">
             <div className="player-info">
               <div className="player-avatar">
-                <img src="/images/mypic.jpeg" alt="Redoyanul" loading="lazy" decoding="async" />
+                <img src="/images/john-renald-profile.jpg" alt="John Renald Hidalgo" loading="lazy" decoding="async" />
               </div>
               <div className="player-details">
-                <span className="player-name">Redoyanul</span>
+                <span className="player-name">John Renald Hidalgo</span>
                 <span className="player-rating">{engineThinking ? '🤔 Thinking...' : 'ELO 3640'}</span>
               </div>
             </div>
@@ -487,6 +497,15 @@ const Play = () => {
           </div>
         </div>
       </div>
+      <dialog ref={checkmateDialog} className="checkmate-dialog" aria-labelledby="checkmate-title" onCancel={() => setShowCheckmate(false)}>
+        <div className="checkmate-symbol" aria-hidden="true">♚</div>
+        <h2 id="checkmate-title">Checkmate!</h2>
+        <p>{game.turn() === 'w' ? 'Black wins!' : 'White wins!'}</p>
+        <div className="checkmate-actions">
+          <button type="button" className="control-btn" onClick={resetGame} autoFocus>New Game</button>
+          <button type="button" className="control-btn" onClick={() => setShowCheckmate(false)}>View Board</button>
+        </div>
+      </dialog>
     </div>
   );
 };

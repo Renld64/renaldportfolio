@@ -14,6 +14,16 @@ export function initialFX() {
     delay: 1,
   });
 
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    gsap.fromTo(
+      [".landing-intro", ".mobile-photo", ".landing-info"],
+      { autoAlpha: 0, y: 16 },
+      { autoAlpha: 1, y: 0, duration: 0.6, stagger: 0.1, clearProps: "transform" }
+    );
+    gsap.to([".header", ".icons-section", ".nav-fade"], { opacity: 1, duration: 0.4 });
+    return;
+  }
+
   const selectors = [".landing-info h3", ".landing-intro h2", ".landing-intro h1"];
   const elements = selectors.flatMap(selector => Array.from(document.querySelectorAll(selector)));
   var landingText = new TextSplitter(elements, {
@@ -82,6 +92,7 @@ export function initialFX() {
 }
 
 function LoopText(Text1: TextSplitter, Text2: TextSplitter) {
+  if (!Text1.chars.length || !Text2.chars.length) return;
   var tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
   const delay = 4;
   const delay2 = delay * 2 + 1;

@@ -48,6 +48,14 @@
   flex-direction: column-reverse;
 }
 
+.work-flex .work-box:has(.project-gallery-single) {
+  flex-direction: column;
+}
+
+.work-box .project-gallery-single {
+  margin-top: 24px;
+}
+
 .work-flex::before,
 .work-flex::after {
   content: "";

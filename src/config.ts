@@ -96,12 +96,13 @@ export const config = {
         },
         {
             id: 5,
-            title: "Phoenix 3.0",
-            category: "AI Assistant",
-            technologies: "Python, Speech Recognition, PyAutoGUI, OpenAI API, Tkinter",
-            image: "/images/Phoenix3.0.png",
-            description: "A JARVIS-inspired personal AI desktop assistant. Controls system functions, manages tasks, answers queries, automates workflows, and provides voice-activated computing experience.",
-            link: "https://github.com/red1-for-hek/phoenix3.0"
+            title: "Arduino Flood Monitoring System",
+            category: "Arduino / Flood Monitoring",
+            technologies: "Arduino",
+            image: "/images/arduino-flood-monitoring.jpg",
+            gallery: ["/images/arduino-flood-monitoring.jpg"],
+            description: "The Flood Monitoring and Alerting System is built around an Arduino controller. Connected sensors frequently monitor water levels, while a GSM module works with the Arduino to support flood alerts.",
+            link: ""
         },
         {
             id: 6,
@@ -111,30 +112,12 @@ export const config = {
             image: "/images/RedxChess.png",
             description: "A high-performance chess engine rated 3640 ELO. Features advanced search algorithms, neural network evaluation, and optimized bitboard representation for lightning-fast move generation.",
             link: "/play"
-        },
-        {
-            id: 7,
-            title: "Prodesk",
-            category: "E-commerce",
-            technologies: "React, Node.js, MongoDB, Express, Stripe",
-            image: "/images/Prodesk.png",
-            description: "A complete e-commerce platform with secure checkout and smooth product browsing.",
-            link: "https://github.com/red1-for-hek/prodesk"
-        },
-        {
-            id: 8,
-            title: "HekTools",
-            category: "Security / Android",
-            technologies: "Kotlin, Android SDK, Firebase, Python, Encryption",
-            image: "/images/hektools.png",
-            description: "An advanced Android monitoring and security research tool. Features remote device management, activity logging, and encrypted data transmission for security testing purposes.",
-            link: ""
         }
     ],
     contact: {
         email: "renaldmain02@gmail.com",
         github: "https://github.com/Renld64",
-        jobstreet: "https://ph.jobstreet.com/profile/me",
+        jobstreet: "https://ph.jobstreet.com/profiles/johnrenald-hidalgo-VdY85V8p7p",
         linkedin: "https://linkedin.com/in/red1-for-hek",
         twitter: "https://x.com/red_1_ul",
         facebook: "https://www.facebook.com/john.renaldz.cortez",
