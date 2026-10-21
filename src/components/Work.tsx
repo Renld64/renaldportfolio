@@ -82,6 +82,9 @@ const Work = () => {
                 {(project.gallery || project.video || !project.image) && <p className="project-description">{project.description}</p>}
                 <h4>{project.gallery || project.video ? "Tools" : "Tools and features"}</h4>
                 <p>{project.technologies}</p>
+                {!project.image && !project.video && project.link && (
+                  <a className="see-all-btn" href={project.link} target="_blank" rel="noopener noreferrer" data-cursor="disable">View on GitHub ↗</a>
+                )}
               </div>
               {project.video ? <ProjectVideo src={project.video} title={project.title} /> : project.gallery ? <ProjectGallery images={project.gallery} title={project.title} /> : project.image ? <WorkImage image={project.image} alt={project.title} link={project.link} /> : null}
             </div>

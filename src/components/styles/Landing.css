@@ -4,7 +4,7 @@
 }
 
 /* Remove mobile photo and ensure 3D character is always hidden on mobile */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .character-model {
     display: none !important;
   }
@@ -555,7 +555,7 @@ h2.landing-info-h2 {
   }
 }
 /* Mobile hero: keep the photo and both roles within the viewport. */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .landing-section { min-height: 100svh; padding: 0 20px 40px; }
   .landing-section .landing-container { width: 100%; min-height: auto; padding: 0; gap: 24px; }
   .landing-container .landing-intro { padding-top: 110px; margin-bottom: 0; }

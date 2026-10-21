@@ -68,3 +68,17 @@
 .work-box-shortfilm { gap: 20px; overflow-y: auto; }
 .work-box-shortfilm .project-description { margin: 12px 0; line-height: 1.5; }
 @media (prefers-reduced-motion: reduce) { .project-gallery-thumb img { transition: none; } }
+
+/* Show complete project screenshots without cropping. */
+.project-gallery-thumb img { object-fit: contain; }
+@media (min-width: 769px) {
+  .work-box-shortfilm { min-height: 0; gap: 16px; padding-top: 24px; padding-bottom: 24px; }
+  .work-box-shortfilm .work-info { flex-shrink: 0; }
+  .work-box-shortfilm .project-gallery:not(.project-gallery-single) { flex: 1; min-height: 0; grid-auto-rows: minmax(0, 1fr); gap: 8px; }
+  .work-box-shortfilm .project-gallery:not(.project-gallery-single) .project-gallery-thumb { min-height: 0; aspect-ratio: auto; }
+}
+@media (max-width: 768px) {
+  .work-box-shortfilm { height: auto; overflow: visible; }
+  .work-box-shortfilm .project-gallery { flex-shrink: 0; }
+}
+

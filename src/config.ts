@@ -65,6 +65,15 @@ export const config = {
     ],
     projects: [
         {
+            id: 9,
+            title: "Automation Testing",
+            category: "Quality Assurance / Test Automation",
+            technologies: "Playwright",
+            image: "/images/playwright-logo.svg",
+            description: "Automated testing for web applications and backend services, focused on repeatable checks, reliable workflows, and regression coverage.",
+            link: "https://github.com/Renld64/playwright-staging"
+        },
+        {
             id: 1,
             title: "3D Shortfilm Animation",
             category: "Capstone / 3D Animation",

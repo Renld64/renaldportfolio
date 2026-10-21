@@ -14,7 +14,7 @@ export function initialFX() {
     delay: 1,
   });
 
-  if (window.matchMedia("(max-width: 768px)").matches) {
+  if (window.matchMedia("(max-width: 1024px)").matches) {
     gsap.fromTo(
       [".landing-intro", ".mobile-photo", ".landing-info"],
       { autoAlpha: 0, y: 16 },

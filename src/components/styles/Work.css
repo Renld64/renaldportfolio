@@ -45,7 +45,7 @@
 }
 
 .work-flex .work-box:nth-child(even) {
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 .work-flex .work-box:has(.project-gallery-single) {

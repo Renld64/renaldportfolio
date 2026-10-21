@@ -1,0 +1,36 @@
+/* Fluid dimensions preserve the existing design between breakpoints. */
+.landing-container .landing-info { box-sizing: border-box; }
+@media (min-width: 1025px) {
+  .landing-container .landing-info { left: 65%; width: 35%; }
+  .landing-container .landing-info h2 { font-size: clamp(22px, 2.25vw, 54px); line-height: 1.12; letter-spacing: 0.025em; }
+  .landing-container .landing-info h2.landing-info-h2 { width: 100%; font-size: clamp(25px, 2.6vw, 62px); }
+  .landing-container .landing-info h2:not(.landing-info-h2) { margin-top: -0.12em; margin-left: 0.2em; }
+  .landing-intro h1 { font-size: clamp(28px, 3vw, 60px); line-height: 1.05; }
+}
+.career-info-in { min-width: 0; gap: clamp(12px, 3vw, 50px); }
+.career-info-in > div { min-width: 0; }
+.career-info h4 { font-size: clamp(21px, 2vw, 33px); line-height: 1.2; overflow-wrap: break-word; }
+.career-info h3 { font-size: clamp(28px, 2.8vw, 48px); white-space: nowrap; }
+.contact-container h3 { font-size: clamp(27px, 4vw, 60px); line-height: 1.2; overflow-wrap: anywhere; }
+.contact-box { min-width: 0; }
+.contact-box a { overflow-wrap: anywhere; }
+@media (max-width: 1024px) {
+  .about-section .about-me { width: 100%; max-width: 100%; }
+  .about-section .about-me p { font-size: clamp(18px, 3vw, 28px); line-height: 1.45; }
+  .whatIDO { flex-direction: column; height: auto; }
+  .whatIDO .what-box { width: 100%; max-width: 600px; margin: auto; }
+  .whatIDO .what-box:first-child { position: relative; top: auto; left: auto; }
+  .whatIDO .what-box h2 { margin: 32px 0; font-size: clamp(36px, 7vw, 60px); line-height: 1.1; }
+  .whatIDO .what-box-in { margin-left: 0; width: 100%; }
+  .whatIDO .what-content { width: 100%; }
+  .whatIDO .what-content h3 { font-size: clamp(22px, 4vw, 30px); line-height: 1.2; }
+  .whatIDO .what-content h5, .whatIDO .what-content-flex { opacity: 1; }
+  .career-section { margin-bottom: 40px; }
+}
+@media (max-width: 480px) {
+  .header ul { flex-direction: row; flex-wrap: wrap; gap: 10px; font-size: 11px; }
+  .career-info-in { flex-wrap: wrap; gap: 12px; }
+  .career-section h2 { font-size: 36px; line-height: 1.15; margin-bottom: 40px; }
+  .whatIDO .what-content { padding-inline: 20px; }
+  .work-container .work-box { padding-inline: 12px; }
+}
