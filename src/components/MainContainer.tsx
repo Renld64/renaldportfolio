@@ -19,13 +19,16 @@ const MainContainer = ({ children }: PropsWithChildren) => {
   );
 
   useEffect(() => {
+    let resizeTimer: ReturnType<typeof setTimeout>;
     const resizeHandler = () => {
-      setSplitText();
       setIsDesktopView(window.innerWidth > 1024);
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(setSplitText, 160);
     };
     resizeHandler();
     window.addEventListener("resize", resizeHandler);
     return () => {
+      clearTimeout(resizeTimer);
       window.removeEventListener("resize", resizeHandler);
     };
   }, []);

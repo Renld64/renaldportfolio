@@ -1,3 +1,15 @@
+interface Project {
+    id: number;
+    title: string;
+    category: string;
+    technologies: string;
+    image: string;
+    description: string;
+    link: string;
+    gallery?: string[];
+    video?: string;
+}
+
 export const config = {
     developer: {
         name: "John Renald",
@@ -65,6 +77,15 @@ export const config = {
     ],
     projects: [
         {
+            id: 10,
+            title: "Aurum Platform",
+            category: "Current Work / Quality Assurance Tester",
+            technologies: "Software Testing, Quality Assurance",
+            image: "/images/aurum-platform.png",
+            description: "I currently work as a tester on Aurum Platform, contributing to the platform's quality assurance.",
+            link: "https://app.aurumplatform.xyz/signin"
+        },
+        {
             id: 9,
             title: "Automation Testing",
             category: "Quality Assurance / Test Automation",
@@ -84,16 +105,6 @@ export const config = {
             link: ""
         },
         {
-            id: 2,
-            title: "Filipino Dishes App",
-            category: "Android Application",
-            technologies: "Android Studio",
-            image: "",
-            video: "/video/filipino-dishes-demo.mp4",
-            description: "Developed during our second year of school by John Carlo Cruz, John Renald Hidalgo, and Arjahn Dave Cruz. Filipino Dishes App helps users learn how to cook Filipino dishes. Selecting a dish displays its ingredients and step-by-step cooking instructions.",
-            link: ""
-        },
-        {
             id: 4,
             title: "Lakbay Transit",
             category: "Mobile App / Ticket Booking",
@@ -101,16 +112,6 @@ export const config = {
             image: "/images/lakbay-transit-1.png",
             gallery: ["/images/lakbay-transit-1.png", "/images/lakbay-transit-2.png", "/images/lakbay-transit-3.png", "/images/lakbay-transit-4.png", "/images/lakbay-transit-5.png", "/images/lakbay-transit-6.png"],
             description: "Lakbay Transit is a modern bus company in the Philippines, operating routes connecting Metro Manila to Central Luzon and Northern Luzon. The Lakbay Transit mobile application simplifies the task of maintaining a good connection between passengers and bus drivers.",
-            link: ""
-        },
-        {
-            id: 5,
-            title: "Arduino Flood Monitoring System",
-            category: "Arduino / Flood Monitoring",
-            technologies: "Arduino",
-            image: "/images/arduino-flood-monitoring.jpg",
-            gallery: ["/images/arduino-flood-monitoring.jpg"],
-            description: "The Flood Monitoring and Alerting System is built around an Arduino controller. Connected sensors frequently monitor water levels, while a GSM module works with the Arduino to support flood alerts.",
             link: ""
         },
         {
@@ -122,7 +123,7 @@ export const config = {
             description: "A high-performance chess engine rated 3640 ELO. Features advanced search algorithms, neural network evaluation, and optimized bitboard representation for lightning-fast move generation.",
             link: "/play"
         }
-    ],
+    ] as Project[],
     contact: {
         email: "renaldmain02@gmail.com",
         github: "https://github.com/Renld64",
@@ -133,6 +134,12 @@ export const config = {
         instagram: "https://www.instagram.com/__renald64/"
     },
     skills: {
+        support: {
+            title: "IT SUPPORT",
+            description: "Keeping systems reliable and users connected",
+            details: "Troubleshooting hardware, software, and network issues to reduce downtime and keep systems running smoothly. Providing clear, patient support to technical and non-technical users, with hands-on experience in Windows, Office 365, Active Directory, and remote desktop tools.",
+            tools: ["Windows", "Office 365", "Active Directory", "Remote Desktop", "Hardware Troubleshooting", "Software Support", "Network Troubleshooting", "Customer Service"]
+        },
         develop: {
             title: "AI AUTOMATION",
             description: "Building intelligent workflows & autonomous systems",

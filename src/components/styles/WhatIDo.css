@@ -492,3 +492,19 @@
     line-height: 6.8rem;
   }
 }
+
+/* Three expandable service cards share the available section height. */
+.whatIDO .what-services-three { height: clamp(540px, 78svh, 760px); }
+.whatIDO .what-services-three .what-content { height: 33.333%; min-height: 33.333%; padding: 18px 30px; border-block-end: 1px dashed #ffffff30; }
+.whatIDO .what-services-three .what-content-active, .whatIDO .what-services-three .what-noTouch:hover { min-height: 50%; padding: 20px 30px; }
+.whatIDO .what-services-three:hover .what-noTouch:not(:hover), .whatIDO .what-services-three .what-content.what-sibling { min-height: 25%; padding: 10px 30px; }
+.whatIDO .what-services-three .what-content h3 { font-size: clamp(22px, 2vw, 30px); line-height: 1.2; }
+.whatIDO .what-services-three .what-content-in { padding-bottom: 12px; }
+@media (max-width: 1024px) { .whatIDO .what-box:last-child { height: auto; } }
+@media (max-width: 480px) { .whatIDO .what-services-three .what-content { padding-inline: 18px; } }
+
+
+/* Keep card content scrollable without a visible scrollbar. */
+.what-content .what-content-in { scrollbar-width: none; }
+.what-content .what-content-in::-webkit-scrollbar { display: none; }
+

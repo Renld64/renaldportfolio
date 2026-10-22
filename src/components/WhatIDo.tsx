@@ -36,7 +36,7 @@ const WhatIDo = () => {
         </h2>
       </div>
       <div className="what-box">
-        <div className="what-box-in">
+        <div className="what-box-in what-services-three">
           <div className="what-border2">
             <svg width="100%">
               <line
@@ -131,6 +131,19 @@ const WhatIDo = () => {
                 {config.skills.design.tools.map((tool, index) => (
                   <div key={index} className="what-tags">{tool}</div>
                 ))}
+              </div>
+              <div className="what-arrow"></div>
+            </div>
+          </div>
+          <div className="what-content what-noTouch" ref={(el) => setRef(el, 2)}>
+            <div className="what-corner"></div>
+            <div className="what-content-in" data-lenis-prevent tabIndex={0} role="region" aria-label="IT Support details">
+              <h3>{config.skills.support.title}</h3>
+              <h4>{config.skills.support.description}</h4>
+              <p>{config.skills.support.details}</p>
+              <h5>Skillset & tools</h5>
+              <div className="what-content-flex">
+                {config.skills.support.tools.map((tool) => <div key={tool} className="what-tags">{tool}</div>)}
               </div>
               <div className="what-arrow"></div>
             </div>

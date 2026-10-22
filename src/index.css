@@ -189,3 +189,11 @@ body {
     font-size: 40px;
   }
 }
+/* Use the document as the touch scroller, including embedded app browsers. */
+@media (max-width: 1024px), (pointer: coarse) {
+  html { height: auto !important; min-height: 100%; overflow-y: auto !important; touch-action: pan-y pinch-zoom; }
+  body { height: auto !important; min-height: 100svh; overflow-y: visible !important; touch-action: pan-y pinch-zoom; }
+  #root, .main-body { height: auto; min-height: 100svh; overflow: visible; }
+  .cursor-main, .nav-fade { pointer-events: none; }
+}
+

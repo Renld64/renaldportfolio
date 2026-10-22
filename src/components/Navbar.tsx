@@ -11,9 +11,19 @@ export let lenis: Lenis | null = null;
 
 const Navbar = () => {
   useEffect(() => {
+    const useNativeScroll = window.matchMedia("(max-width: 1024px), (pointer: coarse)").matches
+      || /FBAN|FBAV|Messenger/i.test(navigator.userAgent);
+    if (useNativeScroll) {
+      // In-app touch browsers must never inherit Lenis's paused scroll handler.
+      lenis?.destroy();
+      lenis = null;
+      document.documentElement.style.overflowY = "auto";
+      document.body.style.overflowY = "auto";
+      return;
+    }
     // Initialize Lenis smooth scroll
     lenis = new Lenis({
-      duration: 1.7,
+      duration: 1.35,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: "vertical",
       gestureOrientation: "vertical",
@@ -49,7 +59,7 @@ const Navbar = () => {
             if (target) {
               lenis.scrollTo(target, {
                 offset: 0,
-                duration: 1.5,
+                duration: 1.2,
               });
             }
           }
