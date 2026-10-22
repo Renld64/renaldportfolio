@@ -81,3 +81,14 @@
     font-size: 18px;
   }
 }
+
+.header .navbar-visits { cursor: default; align-self: center; }
+.header .visit-count { margin: 0; min-height: 20px; }
+.header .visit-count img { height: 20px; }
+@media (max-width: 899px) {
+  .header ul { flex-direction: row; flex-wrap: wrap; justify-content: flex-end; max-width: calc(100% - 48px); align-items: center; }
+  .header .navbar-visits { order: 4; flex-basis: 100%; display: flex; justify-content: flex-end; margin-top: 6px; }
+  .header .visit-count img { height: 18px; }
+}
+@media (min-width: 900px) and (max-width: 1299px) { .header .navbar-connect { left: 35%; } }
+

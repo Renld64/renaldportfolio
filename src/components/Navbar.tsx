@@ -4,6 +4,7 @@ import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
 import Lenis from "lenis";
 import { config } from "../config";
+import VisitCount from "./VisitCount";
 import "./styles/Navbar.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -93,6 +94,7 @@ const Navbar = () => {
           {config.social.email}
         </a>
         <ul>
+          <li className="navbar-visits"><VisitCount /></li>
           <li>
             <a data-href="#about" href="#about">
               <HoverLinks text="ABOUT" />
