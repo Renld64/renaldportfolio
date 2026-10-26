@@ -95,6 +95,15 @@ export const config = {
             link: "https://github.com/Renld64/playwright-staging"
         },
         {
+            id: 11,
+            title: "Play2Save",
+            category: "Quality Assurance Tester",
+            technologies: "Software Testing, Quality Assurance",
+            image: "/images/play2save.svg",
+            description: "Worked as a QA tester on Play2Save, contributing to the platform's quality assurance.",
+            link: "https://play2save.aurumplatform.xyz/login"
+        },
+        {
             id: 1,
             title: "3D Shortfilm Animation",
             category: "Capstone / 3D Animation",

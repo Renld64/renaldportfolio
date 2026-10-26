@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+<title id="title">Play2Save — Quality Assurance</title>
+<desc id="desc">Portfolio project cover for QA testing work on Play2Save.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#181326"/><stop offset="1" stop-color="#09090e"/></linearGradient><radialGradient id="glow"><stop stop-color="#aa83d2" stop-opacity=".25"/><stop offset="1" stop-color="#aa83d2" stop-opacity="0"/></radialGradient></defs>
+<rect width="1200" height="750" fill="url(#bg)"/>
+<ellipse cx="870" cy="360" rx="420" ry="400" fill="url(#glow)"/>
+<rect x="70" y="70" width="1060" height="610" rx="24" fill="none" stroke="#574369"/>
+<g transform="translate(945 160)" fill="none" stroke="#c9a4f5" stroke-width="7" stroke-linejoin="round"><path d="M0 0 65 24v56c0 47-34 74-65 89-31-15-65-42-65-89V24Z"/><path d="m-28 78 20 20 42-45"/></g>
+<text x="125" y="200" fill="#c9a4f5" font-family="Arial,sans-serif" font-size="23" letter-spacing="5">QUALITY ASSURANCE TESTER</text>
+<text x="120" y="380" fill="#f5f0fa" font-family="Arial,sans-serif" font-size="112" font-weight="700">Play2Save</text>
+<path d="M125 424h90" stroke="#c9a4f5" stroke-width="5"/>
+<text x="125" y="495" fill="#c8becf" font-family="Arial,sans-serif" font-size="30">Software Testing / Quality Assurance</text>
+<text x="125" y="610" fill="#a59aac" font-family="Arial,sans-serif" font-size="23">play2save.aurumplatform.xyz</text>
+<path d="M1000 610v-38h-38m38 0-45 45" fill="none" stroke="#c9a4f5" stroke-width="5"/>
+</svg>

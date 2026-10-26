@@ -79,7 +79,7 @@ const Work = () => {
                     <p>{project.category}</p>
                   </div>
                 </div>
-                {(project.id === 10 || project.gallery || project.video || !project.image) && <p className="project-description">{project.description}</p>}
+                {(project.id === 10 || project.id === 11 || project.gallery || project.video || !project.image) && <p className="project-description">{project.description}</p>}
                 <h4>{project.gallery || project.video ? "Tools" : "Tools and features"}</h4>
                 <p>{project.technologies}</p>
                 {!project.image && !project.video && project.link && (
