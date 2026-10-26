@@ -99,7 +99,7 @@ export const config = {
             title: "Play2Save",
             category: "Quality Assurance Tester",
             technologies: "Software Testing, Quality Assurance",
-            image: "/images/play2save.svg",
+            image: "/images/play2save-login.png",
             description: "Worked as a QA tester on Play2Save, contributing to the platform's quality assurance.",
             link: "https://play2save.aurumplatform.xyz/login"
         },
