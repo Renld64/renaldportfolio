@@ -86,6 +86,15 @@ export const config = {
             link: "https://app.aurumplatform.xyz/signin"
         },
         {
+            id: 12,
+            title: "Renald Anime",
+            category: "Website / Anime",
+            technologies: "Web Development",
+            image: "/images/renald-anime.svg",
+            description: "An anime website project. Visit the live site to explore Renald Anime.",
+            link: "https://renaldanime.site/"
+        },
+        {
             id: 9,
             title: "Automation Testing",
             category: "Quality Assurance / Test Automation",

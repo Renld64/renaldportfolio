@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+<title id="title">Renald Anime</title><desc id="desc">Branded portfolio cover for the Renald Anime website.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#18112d"/><stop offset="1" stop-color="#08080f"/></linearGradient><linearGradient id="accent" x2="1" y2="1"><stop stop-color="#dfb4ff"/><stop offset="1" stop-color="#8454db"/></linearGradient><radialGradient id="glow"><stop stop-color="#9e60df" stop-opacity=".3"/><stop offset="1" stop-color="#9e60df" stop-opacity="0"/></radialGradient></defs>
+<rect width="1200" height="750" fill="url(#bg)"/><circle cx="960" cy="320" r="390" fill="url(#glow)"/>
+<g fill="none" stroke="#bc91ec" stroke-opacity=".18"><circle cx="975" cy="320" r="225"/><circle cx="975" cy="320" r="180"/><path d="M770 0 430 750M1010 0 670 750M0 670h1200"/></g>
+<rect x="65" y="65" width="1070" height="620" rx="24" fill="none" stroke="#62477e"/>
+<text x="115" y="165" fill="#caa4f3" font-family="Arial,sans-serif" font-size="22" letter-spacing="6">WEBSITE / ANIME</text>
+<text x="110" y="330" fill="#f5efff" font-family="Arial,sans-serif" font-size="100" font-weight="700">RENALD</text>
+<text x="110" y="438" fill="url(#accent)" font-family="Arial,sans-serif" font-size="100" font-weight="700">ANIME.</text>
+<path d="m930 230 95 65-95 65Z" fill="url(#accent)"/><path d="M115 495h90" stroke="#caa4f3" stroke-width="4"/>
+<text x="115" y="610" fill="#bcaecc" font-family="Arial,sans-serif" font-size="27">renaldanime.site</text>
+<path d="M1055 615v-42h-42m42 0-50 50" fill="none" stroke="#caa4f3" stroke-width="5"/>
+</svg>
